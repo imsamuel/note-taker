@@ -109,8 +109,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container" style={{marginLeft: "2em", marginRight: "2em"}}>
-        <div className="has-text-centered">
+      <div className="container">
+        <div className="has-text-centered" style={{marginLeft: "2em", marginRight: "2em"}}>
           <div className="columns">
             <div className="column"></div>
             <div className="column">
