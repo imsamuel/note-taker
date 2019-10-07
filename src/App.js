@@ -86,9 +86,22 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div class="has-text-centered">
-          <div class="section">
-            <Heading />
+        <div className="has-text-centered">
+          <div className="columns">
+            <div className="column"></div>
+            <div className="column">
+              <Heading />
+              <NoteTakingForm 
+                value={this.state.value}
+                handleChange={this.handleChange}
+                handleSubmit={this.handleSubmit}
+              />
+              {this.state.notes.length > 0 ?
+                <NotesList notes={this.state.notes}/> :
+                <div style={{marginTop: "2.5em"}}>Start adding notes!</div>
+              }
+            </div>
+            <div className="column"></div>
           </div>
         </div>
       </div>

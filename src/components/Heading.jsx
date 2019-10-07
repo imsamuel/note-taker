@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Heading = () => {
-    return <p class="title is-1">NoteTaker</p>;
+    return <p className="title is-1" style={{marginTop: "1em"}}>NoteTaker</p>;
 }
 
 export default Heading;
