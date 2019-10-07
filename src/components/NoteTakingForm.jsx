@@ -4,11 +4,11 @@ const NoteTakingForm = props => {
     const { 
         value, 
         handleChange, 
-        handleSubmit 
+        addNote 
     } = props;
 
     return (
-        <form onSubmit={handleSubmit} style={{marginTop: "2.5em"}}>
+        <form onSubmit={addNote} style={{marginTop: "2.5em"}}>
             <div className="control">
                 <input 
                     className="input"

@@ -21,14 +21,15 @@ class App extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.addNote = this.addNote.bind(this);
+    this.deleteNote = this.deleteNote.bind(this);
   }
 
   handleChange(e) {
     this.setState({value: e.target.value});
   }
 
-  handleSubmit(e) {
+  addNote(e) {
     e.preventDefault();
 
     const { 
@@ -45,13 +46,36 @@ class App extends Component {
      * If successful, add the new note to the notes state
      * prop, and blank out the input field as well.
      */
-    this.state.db
+    db
       .transaction('rw', db.notes, () => {
         db.notes.add(newNote);
+
         this.setState({notes: [...notes, newNote]});
         this.setState({value: ''});
       })
       .catch(err => console.log(err));  
+  }
+
+  /**
+   * deleteNote takes in an id of a note item, then:
+   * 1. Deletes the note record of that id in the 'notes' store.
+   * 2. Updates the 'notes' state prop with the new list after
+   *    removing the note of that id.
+   */
+  deleteNote(id) {
+    const { 
+      db,
+      notes
+    } = this.state;
+
+    db
+      .transaction('rw', db.notes, () => {
+        db.notes.delete(id);
+
+        const newList = [...notes].filter(note => note.id !== id);
+        this.setState({notes: newList});
+      })
+      .catch(err => console.log(err));
   }
 
   componentDidMount() {
@@ -85,7 +109,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container" style={{marginLeft: "2em", marginRight: "2em"}}>
         <div className="has-text-centered">
           <div className="columns">
             <div className="column"></div>
@@ -94,10 +118,14 @@ class App extends Component {
               <NoteTakingForm 
                 value={this.state.value}
                 handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
+                addNote={this.addNote}
               />
               {this.state.notes.length > 0 ?
-                <NotesList notes={this.state.notes}/> :
+                <NotesList 
+                  notes={this.state.notes}
+                  deleteNote={this.deleteNote}
+                /> 
+                :
                 <div style={{marginTop: "2.5em"}}>Start adding notes!</div>
               }
             </div>
