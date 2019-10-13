@@ -17,7 +17,7 @@ const NoteTakingForm = props => {
                     placeholder="Enter note..."
                     onChange={handleChange}
                     required
-                    maxLength="19"
+                    maxLength="25"
                 />
             </div>
             <div>
