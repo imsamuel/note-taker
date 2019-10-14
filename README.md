@@ -18,3 +18,6 @@ Check the package out here: https://github.com/dfahlander/Dexie.js/
 2. Navigate to the root directory and run `yarn install` to download the app's dependencies.
 3. Run yarn start to run the app in development, open http://localhost:3000/ to view it in the browser.
 
+## Hosted on Github Pages
+https://samuelyapwoonpin.github.io/note-taker/
+
