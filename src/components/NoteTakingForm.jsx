@@ -14,7 +14,7 @@ const NoteTakingForm = props => {
                     className="input"
                     type="text" 
                     value={value} 
-                    placeholder="Enter note..."
+                    placeholder="Add note..."
                     onChange={handleChange}
                     required
                     maxLength="25"
