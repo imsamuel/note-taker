@@ -1,4 +1,4 @@
-# Simple note taking application
+# Add a note, then reload the web page; the note's still there!
 
 ## Motivation
 To try out a relatively new tool for client-side storage: **IndexedDB**
