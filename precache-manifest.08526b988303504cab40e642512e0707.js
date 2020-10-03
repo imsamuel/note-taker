@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1099129a4c928628e81afdb11e10756",
+    "revision": "f5dc348390c9dd983b208e2886363824",
     "url": "/note-taker/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/note-taker/static/js/2.5ed25568.chunk.js"
   },
   {
-    "revision": "06836e649f751424a75d",
-    "url": "/note-taker/static/js/main.bef8d8ea.chunk.js"
+    "revision": "8cf5ab0143e676d4719e",
+    "url": "/note-taker/static/js/main.a66be0dc.chunk.js"
   },
   {
     "revision": "d7af407f361985ba8d01",
