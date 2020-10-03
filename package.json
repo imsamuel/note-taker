@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://samuelyapwoonpin.github.io/note-taker",
+  "homepage": "http://imsamuel.github.io/note-taker",
   "dependencies": {
     "bulma": "^0.7.5",
     "dexie": "^2.0.4",
