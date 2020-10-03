@@ -19,5 +19,5 @@ Check the package out here: https://github.com/dfahlander/Dexie.js/
 3. Run `yarn start` to run the app in development, open http://localhost:3000/ to view it in the browser.
 
 ## Hosted on Github Pages
-https://samuelyapwoonpin.github.io/note-taker/
+https://imsamuel.github.io/note-taker
 
