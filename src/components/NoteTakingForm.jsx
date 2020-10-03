@@ -25,7 +25,7 @@ const NoteTakingForm = props => {
                     type="submit"
                     className="button is-fullwidth is-success"
                 >
-                    Add To Notes
+                    Add
                 </button>
             </div>
         </form>
