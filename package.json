@@ -5,7 +5,7 @@
   "homepage": "http://imsamuel.github.io/note-taker",
   "dependencies": {
     "bulma": "^0.7.5",
-    "dexie": "^2.0.4",
+    "dexie": "^3.2.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0"
